@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  python2023:
+    image: python2023
+    build:
+      context: .
+      dockerfile: ./Dockerfile
