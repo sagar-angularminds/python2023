@@ -42,7 +42,7 @@ while m != "exit":
 
     elif m == "copy":
         # open a file
-        sample_file = open("app/sample.txt", "r")
+        sample_file = open("./sample.txt", "r")
 
         copy_file(sample_file)
 
