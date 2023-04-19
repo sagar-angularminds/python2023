@@ -1,6 +1,5 @@
 import os
-from tkinter import filedialog as fd
-from playsound import playsound
+# from tkinter import filedialog as fd
 
 # from dotenv import load_dotenv
 
@@ -19,7 +18,7 @@ def menu(i):
 m = ""
 
 while m != "exit":
-    i = raw_input(
+    i = input(
         """
      1. append 
      2. copy + separate directory
@@ -34,9 +33,9 @@ while m != "exit":
     m = menu(int(i))
 
     if m == "append":
-        input_file = raw_input("Enter file name:")
+        input_file = input("Enter file name:")
 
-        input_text = raw_input("Enter text:")
+        input_text = input("Enter text:")
 
         append_file(input_file, input_text)
 
@@ -50,19 +49,22 @@ while m != "exit":
         sample_file.close()
 
     elif m == "select":
-        filename = fd.askopenfilename()
-        print(filename.split("/")[-1])
+        # filename = fd.askopenfilename()
+        # print(filename.split("/")[-1])
+        print(m)
 
     elif m == "display":
-        filename = fd.askopenfilename()
-        display_file(filename)
+        # filename = fd.askopenfilename()
+        # display_file(filename)
+        print(m)
 
     elif m == "play":
-        filename = fd.askopenfilename()
-        playsound(filename)
+        # filename = fd.askopenfilename()
+        print(m)
 
     elif m == "print_directory":
-        print_directory(os.getcwd())
+        # print_directory(os.getcwd())
+        print(m)
 
     elif m == "exit":
         exit()

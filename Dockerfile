@@ -1,8 +1,14 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:2.7
+FROM python:3.10-slim-buster
 
-WORKDIR /app
-COPY app/ ./app/
+WORKDIR /src
 
-# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["sh", "/app/app/startup.sh"]
+COPY src/ .
+
+COPY requirements.txt requirements.txt
+
+RUN pip3 freeze > requirements.txt
+
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+CMD ["sh","startup.sh"]

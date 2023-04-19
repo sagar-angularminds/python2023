@@ -12,7 +12,7 @@ def copy_file(file_content):
         except:
             print("Empty line found")
 
-        path = os.path.join(os.getcwd() + "./output", folder_name)
+        path = os.path.join(os.getcwd() + "/output", folder_name)
 
         # check if directory already exist then first remove it and create new with the same name
         if os.path.exists(path) and os.path.isdir(path):
